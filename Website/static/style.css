@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("UsedCar.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    /* Adjust the height as needed */
+
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Adjust the background color and opacity */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 22%;
+    margin-top: 2%;
+    width: 50%;
+}
+
+h1 {
+
+    text-align: center;
+    color: #333;
+    /* Change the color as needed */
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+}
+
+th,
+tr,
+td {
+
+    padding: 8px 8px;
+    text-align: right;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    font-size: 16px;
+    /* Adjust font size as needed */
+    background-color: #576aca;
+    /* Set background color */
+    color: #fff;
+    /* Set text color */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Add border-radius for rounded corners */
+    cursor: pointer;
+    /* Add a pointer cursor on hover */
+    transition: background-color 0.3s;
+    /* Smooth transition for background color */
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.glow-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ebfc4f;
+    /* Text color */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Glow effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+input,option,select {
+    width: calc(100% - 12px);
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+    background-color: #e0d0d0;
+    /* Set the background color */
+    color: #333;
+    /* Set the text color */
+    font-weight: bold;
+    font-size: 10px;
+}
+
+input:focus, select:focus {
+    border-color: #012244;
+    background-color: #ffffff93;
+    /* Change background color on focus */
+    color: #000;
+    /* Change text color on focus */
+    border-radius: 20px;
+}
+
+
+label {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #555;
+}

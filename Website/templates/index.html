@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USED CARS</title>
+    <link rel="icon" href="../static/UsedCar.jpg">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+
+    <section class="header">
+        <div class="container">
+            <div class="content-box">
+                <h1>ENTER CAR DETAILS </h1>
+
+                <form class="container" action="/usedCar_predict" method="post">
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><label for="car_name">Choose Car name:</label></td>
+                                <td>
+
+                                    <select name="car_name" id="car_name">
+                                        {% for name in car_names %}
+                                        <option value="{{ name[0] }}">{{ name[1] }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="Location">Choose location:</label></td>
+                                <td>
+                                    <select name="Location" id="Location">
+                                        {% for name in car_location %}
+                                        <option value="{{ name[0] }}">{{ name[1] }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="year">Year:</label></td>
+                                <td>
+                                    <input type="text" id="year" name="year">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="kilometers_driven">Kilometers Driven:</label></td>
+                                <td>
+                                    <input type="text" id="kilometers_driven" name="kilometers_driven">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="car_fuel_Type">Choose Fuel Type:</label></td>
+                                <td>
+                                    <select name="car_fuel_Type" id="car_fuel_Type">
+                                        {% for name in car_fuel_Type %}
+                                        <option value="{{ name[0] }}">{{ name[1] }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="Transmission">Choose Transmission Type:</label></td>
+                                <td>
+                                    <select name="Transmission" id="Transmission">
+                                        <option value="0">Automatic</option>
+                                        <option value="1">Manual</option>    
+                                    </select>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="car_Owner_Type">Choose Car Owner Type:</label></td>
+                                <td>
+                                    <select name="car_Owner_Type" id="car_Owner_Type">
+                                        {% for name in car_Owner_Type %}
+                                        <option value="{{ name[0] }}">{{ name[1] }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="Mileage">Mileage:</label></td>
+                                <td>
+                                    <input type="text" id="Mileage" name="Mileage">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="Engine">Engine:</label></td>
+                                <td>
+                                    <input type="text" id="Engine" name="Engine">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="Power">Power:</label></td>
+                                <td>
+                                    <input type="text" id="Power" name="Power">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="Seats">Seats:</label></td>
+                                <td>
+                                    <input type="text" id="Seats" name="Seats">
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <button type="submit" class="submit-button">submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="glow-text">{{pred}}</div>
+    </section>
+
+</body>
+
+</html>
