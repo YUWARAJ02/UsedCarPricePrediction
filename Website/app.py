@@ -57,7 +57,7 @@ def UsedCar():
     user_prediction = model.predict(user_input_df)
 
     print(f"Predicted Price: {user_prediction[0]}")
-    return render_template('index.html',pred=f'Price {round(user_prediction[0]/100,2)} Lakhs',car_names=car_names,
+    return render_template('index.html',pred=f'Price {round(user_prediction[0]/10,2)} Lakhs',car_names=car_names,
                            car_location=car_location,
                            car_fuel_Type=car_fuel_Type,car_Owner_Type=car_Owner_Type)
 
