@@ -46,18 +46,23 @@ def UsedCar():
     # Collect input from the user
     user_input = []
     form_value=request.form.values() 
-    print(form_value)
+    
     for x in form_value:
         user_input.append(pd.to_numeric(x).astype(float))
 
     # Create a DataFrame with the user input
     user_input_df = pd.DataFrame([user_input], columns=feature1)
-
+    print(user_input)
     # Make predictions on the user input
     user_prediction = model.predict(user_input_df)
 
     print(f"Predicted Price: {user_prediction[0]}")
-    return render_template('index.html',pred=f'Price {round(user_prediction[0]/10,2)} Lakhs',car_names=car_names,
+    if(user_prediction[0]>0): 
+        return render_template('index.html',pred=f'Price {round(user_prediction[0]/10,2)} Lakhs',car_names=car_names,
+                           car_location=car_location,
+                           car_fuel_Type=car_fuel_Type,car_Owner_Type=car_Owner_Type)
+    else:
+        return render_template('index.html',pred=f'This Car can\'t sale',car_names=car_names,
                            car_location=car_location,
                            car_fuel_Type=car_fuel_Type,car_Owner_Type=car_Owner_Type)
 
